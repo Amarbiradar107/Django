@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from firstapp import views
+from testapp import views as v
+from Datetimeapp import views as d 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('wish/',views.display)
+    path('wish/',views.display),
+    path("test/",v.display_test),
+    path("datetime/", d.date_time)
 ]
